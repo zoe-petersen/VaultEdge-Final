@@ -89,7 +89,7 @@ export default {
         }, 300);
         // Fetch products from backend where brand is "Google"
         try {
-            const response = await axios.get('http://localhost:3000/products/brand/Google');
+            const response = await axios.get('https://vaultedge-final.onrender.com/products/brand/Google');
             this.products = response.data.map(product => ({
                 id: product.product_id,
                 name: product.product_name,

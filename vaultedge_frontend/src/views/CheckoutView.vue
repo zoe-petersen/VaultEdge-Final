@@ -271,7 +271,7 @@ const packages = ref([]);
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3000/packages');
+    const response = await axios.get('https://vaultedge-final.onrender.com/packages');
     packages.value = response.data;
   } catch (error) {
     console.error('Failed to fetch packages for savings calculation:', error);

@@ -49,7 +49,7 @@ const email = ref("");
 const message = ref("");
 const handleRequest = async () => {
   try {
-    const res = await fetch("http://localhost:3000/auth/forgot-password",  {
+    const res = await fetch("https://vaultedge-final.onrender.com/auth/forgot-password",  {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email.value }),

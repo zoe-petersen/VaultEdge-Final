@@ -68,7 +68,7 @@ const handleScroll = () => {
 onMounted(async () => {
   try {
     const productId = route.params.id;
-    const response = await axios.get(`http://localhost:3000/products/id/${productId}`)
+    const response = await axios.get(`https://vaultedge-final.onrender.com/products/id/${productId}`)
     const p = response.data
     product.value = {
       id: p.product_id,

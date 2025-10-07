@@ -57,7 +57,7 @@ const password = ref("");
 const message = ref("");
 const handleReset = async () => {
   try {
-    const res = await fetch(`http://localhost:3000/auth/reset-password/${token}`, {
+    const res = await fetch(`https://vaultedge-final.onrender.com/auth/reset-password/${token}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ password: password.value }),

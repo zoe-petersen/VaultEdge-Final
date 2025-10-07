@@ -89,7 +89,7 @@ export default {
         }, 300);
         // Fetch products from backend where brand is "ERSBiometric" - the %20 represents a space
         try {
-            const response = await axios.get('http://localhost:3000/products/brand/ERS%20Biometric');
+            const response = await axios.get('https://vaultedge-final.onrender.com/products/brand/ERS%20Biometric');
             this.products = response.data.map(product => ({
                 id: product.product_id,
                 name: product.product_name,

@@ -34,7 +34,7 @@ export function useAuth() {
   const login = async (email, password) => {
     isLoading.value = true
     try {
-      const response = await axios.post('http://localhost:3000/users/login', {
+      const response = await axios.post('https://vaultedge-final.onrender.com/users/login', {
         email,
         password
       })
@@ -76,7 +76,7 @@ export function useAuth() {
         user.value = JSON.parse(storedUser)
       } else {
         // If you have an endpoint to get user info, call it here
-        // const response = await axios.get('http://localhost:3000/users/me')
+        // const response = await axios.get('https://vaultedge-final.onrender.com/users/me')
         // user.value = response.data
         
         // Fallback: create basic user from token (you might decode JWT here)
@@ -92,7 +92,7 @@ export function useAuth() {
   const register = async (userData) => {
     isLoading.value = true
     try {
-      await axios.post('http://localhost:3000/users/register', userData)
+      await axios.post('https://vaultedge-final.onrender.com/users/register', userData)
       return { success: true }
     } catch (error) {
       return { 
